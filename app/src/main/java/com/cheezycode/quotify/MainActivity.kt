@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
-    lateinit var mainViewModel: MainViewModel
+    private lateinit var mainViewModel: MainViewModel
 
     private val quoteText: TextView
         get() = findViewById(R.id.quoteText)
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun setQuote(quote:Quote){
+    private fun setQuote(quote:Quote){
         quoteText.text = quote.text
         quoteAuthor.text = quote.author
     }
